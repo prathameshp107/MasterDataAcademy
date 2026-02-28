@@ -1,0 +1,58 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Modern learning environment",
+      "imageUrl": "https://images.unsplash.com/photo-1686984197046-1925353b0ace?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsZWFybmluZyUyMG9mZmljZXxlbnwwfHx8fDE3NzIyMTcxMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "learning office"
+    },
+    {
+      "id": "course-data-science",
+      "description": "Data Science course cover",
+      "imageUrl": "https://images.unsplash.com/photo-1625535069654-cfeb8f829088?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkYXRhJTIwc2NpZW5jZXxlbnwwfHx8fDE3NzIyMDE5NzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data science"
+    },
+    {
+      "id": "course-ai",
+      "description": "Artificial Intelligence course cover",
+      "imageUrl": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHx8MTc3MjE5Mzk3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "artificial intelligence"
+    },
+    {
+      "id": "course-excel",
+      "description": "Advanced Excel course cover",
+      "imageUrl": "https://images.unsplash.com/photo-1567193729952-23830c0743ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxidXNpbmVzcyUyMHNwcmVhZHNoZWV0fGVufDB8fHx8MTc3MjIxNzEyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business spreadsheet"
+    },
+    {
+      "id": "instructor-1",
+      "description": "Lead instructor portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1610631066894-62452ccb927c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBwZXJzb258ZW58MHx8fHwxNzcyMTM1NjUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional person"
+    },
+    {
+      "id": "instructor-2",
+      "description": "Senior data analyst portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMHdvbWFufGVufDB8fHx8MTc3MjE0NDA4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business woman"
+    },
+    {
+      "id": "dashboard-welcome",
+      "description": "Personalized dashboard welcome banner",
+      "imageUrl": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMHRlY2h8ZW58MHx8fHwxNzcyMjEwODMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract tech"
+    },
+    {
+      "id": "about-mission",
+      "description": "Collaboration in a modern tech office",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0ZWNoJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NzIyMTcxMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech collaboration"
+    },
+    {
+      "id": "google-maps",
+      "description": "Office location on map",
+      "imageUrl": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "map location"
+    }
+  ]
+}
