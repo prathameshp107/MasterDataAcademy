@@ -18,18 +18,18 @@ export default function Home() {
 
       {/* Stats Section - Modern Glassmorphism */}
       <section className="container mx-auto px-4 -mt-20 relative z-30 mb-24">
-        <div className="bg-white/80 backdrop-blur-2xl rounded-[3rem] border border-white/40 shadow-2xl p-8 md:p-12 overflow-hidden relative">
+        <div className="bg-white/80 backdrop-blur-2xl rounded-[3rem] border border-white/40 shadow-2xl p-6 md:p-8 lg:p-12 overflow-hidden relative">
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10" />
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12 text-center">
             {[
               { val: '50K+', label: 'Active Students' },
               { val: '150+', label: 'Expert Courses' },
               { val: '200+', label: 'Lead Instructors' },
               { val: '98%', label: 'Satisfaction' }
             ].map((stat, i) => (
-              <div key={i} className={i > 0 ? "lg:border-l border-border" : ""}>
-                <h3 className="text-4xl font-black gradient-text mb-2">{stat.val}</h3>
-                <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{stat.label}</p>
+              <div key={i} className={`flex flex-col items-center justify-center ${i > 0 ? "md:border-l border-border" : ""} py-4`}>
+                <h3 className="text-3xl md:text-4xl font-black gradient-text mb-2 leading-none">{stat.val}</h3>
+                <p className="text-[0.65rem] md:text-xs font-bold text-muted-foreground uppercase tracking-widest leading-tight px-1">{stat.label}</p>
               </div>
             ))}
           </div>
