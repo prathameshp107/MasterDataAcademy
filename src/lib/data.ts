@@ -4,6 +4,7 @@ export interface Course {
   description: string;
   category: string;
   price: number;
+  discount?: number;
   rating: number;
   studentsCount: number;
   instructor: {
@@ -75,6 +76,7 @@ export const COURSES: Course[] = [
     description: 'Learn the core foundations of Python specifically for data manipulation and visualization. This course takes you from zero to hero in data analysis.',
     category: 'Data Science',
     price: 89.99,
+    discount: 50,
     rating: 4.8,
     studentsCount: 12450,
     instructor: {
@@ -96,6 +98,7 @@ export const COURSES: Course[] = [
     description: 'Deep dive into neural networks and cutting-edge machine learning architectures. Master the frameworks used by industry giants.',
     category: 'Artificial Intelligence',
     price: 129.99,
+    discount: 40,
     rating: 4.9,
     studentsCount: 8200,
     instructor: {
@@ -138,6 +141,7 @@ export const COURSES: Course[] = [
     description: 'Prepare for the AWS certification with comprehensive coverage of cloud data services. Build scalable cloud solutions.',
     category: 'Cloud Computing',
     price: 149.99,
+    discount: 40,
     rating: 4.9,
     studentsCount: 3100,
     instructor: {
@@ -180,6 +184,7 @@ export const COURSES: Course[] = [
     description: 'Master statistical modeling and hypothesis testing using the R programming language for rigorous data science.',
     category: 'Data Science',
     price: 69.99,
+    discount: 50,
     rating: 4.5,
     studentsCount: 7800,
     instructor: {
