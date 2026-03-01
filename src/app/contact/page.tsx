@@ -29,22 +29,22 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Header Section */}
-      <section className="relative pt-40 pb-20 overflow-hidden bg-slate-950 text-white">
-        <div className="absolute top-0 right-0 w-[50%] h-full bg-primary/20 rounded-full blur-[120px] -z-0 translate-x-1/2" />
-        <div className="container mx-auto px-4 text-center relative z-10">
+      <section className="relative pt-40 pb-20 overflow-hidden bg-white border-b border-border">
+        <div className="absolute top-0 right-0 w-[50%] h-full bg-primary/5 rounded-full blur-[120px] -z-10 translate-x-1/2" />
+        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Badge className="bg-primary/20 text-primary border-none px-6 py-2 rounded-full font-bold mb-6 uppercase tracking-widest text-xs">
+            <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-none px-6 py-2 rounded-full font-bold mb-6 uppercase tracking-widest text-xs">
               Connect With Us
             </Badge>
             <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-[0.9]">
               Let's Start a <br />
               <span className="gradient-text">Conversation</span>
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium">
               Whether you're looking for enterprise solutions or individual mastery,
               our advisors are here to guide your data evolution.
             </p>
