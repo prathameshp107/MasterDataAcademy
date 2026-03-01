@@ -8,23 +8,32 @@ import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import Logo from '@/components/ui/Logo';
 
-export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+interface NavbarProps {
+  solidOnTop?: boolean;
+}
+
+export function Navbar({ solidOnTop = false }: NavbarProps) {
+  const [isScrolled, setIsScrolled] = useState(solidOnTop);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    if (solidOnTop) return;
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [solidOnTop]);
 
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent',
-        isScrolled ? 'bg-white/80 backdrop-blur-md border-border py-3' : 'bg-transparent py-5'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
+        isScrolled
+          ? 'bg-white/80 backdrop-blur-md border-border py-3'
+          : 'bg-transparent border-transparent py-5'
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">

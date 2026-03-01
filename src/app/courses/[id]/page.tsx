@@ -46,7 +46,7 @@ export default function CourseDetail({ params }: { params: Promise<{ id: string 
 
   return (
     <main className="min-h-screen bg-background">
-      <Navbar />
+      <Navbar solidOnTop />
       
       {/* Dark Hero Header */}
       <section className="bg-slate-950 text-white pt-40 pb-20 relative overflow-hidden">
