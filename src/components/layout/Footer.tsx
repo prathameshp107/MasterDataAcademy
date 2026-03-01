@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 
 export function Footer() {
   return (
@@ -7,16 +8,11 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-tr from-primary to-secondary rounded-lg flex items-center justify-center text-white font-bold">
-                M
-              </div>
-              <span className="text-xl font-bold tracking-tight">
-                Master Data <span className="gradient-text">Academy</span>
-              </span>
+            <Link href="/" className="flex items-center">
+              <Logo className="w-auto" />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Empowering the next generation of data professionals through expert-led, 
+              Empowering the next generation of data professionals through expert-led,
               practical training and cutting-edge curriculum.
             </p>
             <div className="flex gap-4">
