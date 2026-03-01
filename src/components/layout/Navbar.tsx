@@ -6,6 +6,7 @@ import { Menu, X, Search, ShoppingCart, LogIn } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
+import Logo from '@/components/ui/Logo';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,13 +28,8 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-gradient-to-tr from-primary to-secondary rounded-xl flex items-center justify-center text-white font-bold text-xl">
-            M
-          </div>
-          <span className="text-xl font-bold tracking-tight hidden sm:block">
-            Master Data <span className="gradient-text">Academy</span>
-          </span>
+        <Link href="/" className="flex items-center">
+          <Logo className="w-auto h-8" />
         </Link>
 
         <div className="hidden md:flex items-center flex-1 max-w-md mx-8">
