@@ -46,7 +46,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Data Analyst',
     company: 'TechFlow Solutions',
     content: "MasterData Ascend transformed my career. The project-based approach gave me the confidence to handle real-world datasets that I use daily in my new role.",
-    avatar: 'https://picsum.photos/seed/user1/100/100',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop',
     rating: 5
   },
   {
@@ -55,7 +55,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Senior Engineer',
     company: 'Nexus Systems',
     content: "The AI-driven recommendations are spot on. It saved me hours of searching for the right course and kept me on a logical progression path.",
-    avatar: 'https://picsum.photos/seed/user2/100/100',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop',
     rating: 5
   },
   {
@@ -64,7 +64,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'ML Specialist',
     company: 'Global AI Lab',
     content: "High-quality production and expert instructors. This isn't just another tutorial site; it's a comprehensive career accelerator for serious professionals.",
-    avatar: 'https://picsum.photos/seed/user3/100/100',
+    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop',
     rating: 4
   }
 ];
@@ -82,10 +82,10 @@ export const COURSES: Course[] = [
     instructor: {
       name: 'Dr. Sarah Johnson',
       role: 'Senior Data Scientist',
-      avatar: 'https://picsum.photos/seed/inst1/200/200',
+      avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMHdvbWFufGVufDB8fHx8MTc3MjE0NDA4MHww&ixlib=rb-4.1.0&q=80&w=1080',
       bio: 'Dr. Johnson is a leading expert in computational statistics with over 15 years of experience at top-tier tech firms.'
     },
-    image: 'https://picsum.photos/seed/ds1/600/400',
+    image: 'https://images.unsplash.com/photo-1625535069654-cfeb8f829088?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkYXRhJTIwc2NpZW5jZXxlbnwwfHx8fDE3NzIyMDE5NzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
     duration: '24h 30m',
     level: 'Beginner',
     lessonsCount: 145,
@@ -104,10 +104,10 @@ export const COURSES: Course[] = [
     instructor: {
       name: 'Michael Chen',
       role: 'AI Researcher',
-      avatar: 'https://picsum.photos/seed/inst2/200/200',
+      avatar: 'https://images.unsplash.com/photo-1610631066894-62452ccb927c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBwZXJzb258ZW58MHx8fHwxNzcyMTM1NjUyfDA&ixlib=rb-4.1.0&q=80&w=1080',
       bio: 'Michael is an AI researcher specializing in deep learning architectures and computer vision.'
     },
-    image: 'https://picsum.photos/seed/ai1/600/400',
+    image: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHx8MTc3MjE5Mzk3OXww&ixlib=rb-4.1.0&q=80&w=1080',
     duration: '32h 15m',
     level: 'Advanced',
     lessonsCount: 180,
@@ -125,10 +125,10 @@ export const COURSES: Course[] = [
     instructor: {
       name: 'Emma Williams',
       role: 'BI Consultant',
-      avatar: 'https://picsum.photos/seed/inst3/200/200',
+      avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?q=80&w=400&auto=format&fit=crop',
       bio: 'Emma has consulted for Fortune 500 companies on their data strategy and visualization pipelines.'
     },
-    image: 'https://picsum.photos/seed/excel1/600/400',
+    image: 'https://images.unsplash.com/photo-1567193729952-23830c0743ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxidXNpbmVzcyUyMHNwcmVhZHNoZWV0fGVufDB8fHx8MTc3MjIxNzEyNXww&ixlib=rb-4.1.0&q=80&w=1080',
     duration: '18h 45m',
     level: 'Intermediate',
     lessonsCount: 95,
@@ -147,10 +147,10 @@ export const COURSES: Course[] = [
     instructor: {
       name: 'David Miller',
       role: 'Cloud Architect',
-      avatar: 'https://picsum.photos/seed/inst4/200/200',
+      avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop',
       bio: 'David is a certified AWS Solutions Architect with a passion for teaching cloud-native data patterns.'
     },
-    image: 'https://picsum.photos/seed/cloud1/600/400',
+    image: 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?q=80&w=800&auto=format&fit=crop',
     duration: '40h 0m',
     level: 'Advanced',
     lessonsCount: 210,
@@ -190,9 +190,9 @@ export const COURSES: Course[] = [
     instructor: {
       name: 'Dr. Sarah Johnson',
       role: 'Senior Data Scientist',
-      avatar: 'https://picsum.photos/seed/inst1/200/200'
+      avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMHdvbWFufGVufDB8fHx8MTc3MjE0NDA4MHww&ixlib=rb-4.1.0&q=80&w=1080'
     },
-    image: 'https://picsum.photos/seed/stats1/600/400',
+    image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800&auto=format&fit=crop',
     duration: '15h 20m',
     level: 'Intermediate',
     lessonsCount: 85,
