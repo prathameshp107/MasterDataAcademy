@@ -81,16 +81,18 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.2 }}
             className="relative hidden lg:block"
           >
-            <div className="relative w-full aspect-square max-w-[600px] mx-auto">
+            <div className="relative w-full max-w-[600px] mx-auto h-[520px]">
               {/* Feature Image with modern framing */}
-             <div className="absolute inset-0 rounded-[4rem] overflow-hidden shadow-2xl z-10 border-[12px] border-white/30 backdrop-blur-xl rotate-3 hover:rotate-0 transition-transform duration-700">
-                <Image
-                  src={DataAnalyticsImage}
-                  alt="Data analytics visualization"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <div className="absolute inset-0 rounded-[4rem] overflow-hidden shadow-2xl z-10 border-[12px] border-white/30 backdrop-blur-xl rotate-3 hover:rotate-0 transition-transform duration-700">
+                <div className="w-full h-full bg-black/10">
+                  <Image
+                    src={DataAnalyticsImage}
+                    alt="Data analytics visualization"
+                    fill
+                    className="object-cover scale-[1.02]"
+                    priority
+                  />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
 
