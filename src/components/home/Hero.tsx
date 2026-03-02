@@ -6,6 +6,7 @@ import { ArrowRight, Sparkles, ShieldCheck, Trophy } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import DataAnalyticsImage from '@/../public/lib/Data_analytics.png';
 
 export function Hero() {
   const heroBg = PlaceHolderImages.find(img => img.id === 'hero-bg');
@@ -82,13 +83,13 @@ export function Hero() {
           >
             <div className="relative w-full aspect-square max-w-[600px] mx-auto">
               {/* Feature Image with modern framing */}
-              <div className="absolute inset-0 rounded-[4rem] overflow-hidden shadow-2xl z-10 border-[12px] border-white/30 backdrop-blur-xl rotate-3 hover:rotate-0 transition-transform duration-700">
+             <div className="absolute inset-0 rounded-[4rem] overflow-hidden shadow-2xl z-10 border-[12px] border-white/30 backdrop-blur-xl rotate-3 hover:rotate-0 transition-transform duration-700">
                 <Image
-                  src="https://picsum.photos/seed/modernlearn/1000/1000"
-                  alt="Modern learning platform"
+                  src={DataAnalyticsImage}
+                  alt="Data analytics visualization"
                   fill
                   className="object-cover"
-                  data-ai-hint="learning"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
