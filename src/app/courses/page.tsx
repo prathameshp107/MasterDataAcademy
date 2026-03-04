@@ -28,6 +28,20 @@ export default function CourseCatalogue() {
     return matchesSearch && matchesCategory;
   });
 
+  const sortedCourses = [...filteredCourses].sort((a, b) => {
+    switch (sortBy) {
+      case 'Popularity':
+        return b.studentsCount - a.studentsCount;
+      case 'Rating':
+        return b.rating - a.rating;
+      case 'Price Low-High':
+        return a.price - b.price;
+      case 'Newest':
+      default:
+        return 0;
+    }
+  });
+
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -105,7 +119,7 @@ export default function CourseCatalogue() {
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             >
               <AnimatePresence>
-                {filteredCourses.map((course, idx) => (
+                {sortedCourses.map((course, idx) => (
                   <motion.div
                     key={course.id}
                     layout
