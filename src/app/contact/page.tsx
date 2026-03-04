@@ -1,6 +1,7 @@
 
 "use client";
 
+import { FormEvent, useState } from 'react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { motion } from 'framer-motion';
@@ -18,11 +19,64 @@ import {
   Globe,
   Sparkles
 } from 'lucide-react';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { GoogleMapEmbed } from '@/components/ui/google-map';
 
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitMessage(null);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      fullName: String(formData.get('fullName') || '').trim(),
+      email: String(formData.get('email') || '').trim(),
+      subject: String(formData.get('subject') || '').trim(),
+      message: String(formData.get('message') || '').trim(),
+    };
+
+    if (!payload.fullName || !payload.email || !payload.subject || !payload.message) {
+      setSubmitMessage({
+        type: 'error',
+        text: 'Please fill all fields before submitting.',
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const submission = {
+        id: `CONTACT-${Date.now()}`,
+        createdAt: new Date().toISOString(),
+        ...payload,
+      };
+
+      const storageKey = 'mda_contact_submissions';
+      const existing = localStorage.getItem(storageKey);
+      const submissions = existing ? JSON.parse(existing) : [];
+      submissions.unshift(submission);
+      localStorage.setItem(storageKey, JSON.stringify(submissions));
+
+      // Keeps form data visible for static/frontend-only deployment debugging.
+      console.log('Contact form submission:', submission);
+
+      setSubmitMessage({
+        type: 'success',
+        text: 'Message saved successfully (frontend-only mode).',
+      });
+      form.reset();
+    } catch (error) {
+      setSubmitMessage({
+        type: 'error',
+        text: error instanceof Error ? error.message : 'Unable to save message right now. Please try again.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   return (
     <main className="min-h-screen bg-background">
@@ -70,35 +124,66 @@ export default function ContactPage() {
                   <p className="text-muted-foreground font-medium">Fill out the form below and we'll be in touch shortly.</p>
                 </div>
 
-                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-black uppercase tracking-widest text-muted-foreground ml-1">Full Name</label>
-                      <Input placeholder="John Doe" className="h-14 rounded-2xl bg-slate-50 border-transparent focus:bg-white transition-all shadow-sm" />
+                      <Input
+                        name="fullName"
+                        placeholder="John Doe"
+                        className="h-14 rounded-2xl bg-slate-50 border-transparent focus:bg-white transition-all shadow-sm"
+                        required
+                      />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-black uppercase tracking-widest text-muted-foreground ml-1">Email Address</label>
-                      <Input type="email" placeholder="john@company.com" className="h-14 rounded-2xl bg-slate-50 border-transparent focus:bg-white transition-all shadow-sm" />
+                      <Input
+                        name="email"
+                        type="email"
+                        placeholder="john@company.com"
+                        className="h-14 rounded-2xl bg-slate-50 border-transparent focus:bg-white transition-all shadow-sm"
+                        required
+                      />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <label className="text-sm font-black uppercase tracking-widest text-muted-foreground ml-1">Subject</label>
-                    <Input placeholder="Course Inquiry" className="h-14 rounded-2xl bg-slate-50 border-transparent focus:bg-white transition-all shadow-sm" />
+                    <Input
+                      name="subject"
+                      placeholder="Course Inquiry"
+                      className="h-14 rounded-2xl bg-slate-50 border-transparent focus:bg-white transition-all shadow-sm"
+                      required
+                    />
                   </div>
 
                   <div className="space-y-2">
                     <label className="text-sm font-black uppercase tracking-widest text-muted-foreground ml-1">Message</label>
                     <Textarea
+                      name="message"
                       placeholder="Tell us about your goals..."
                       className="min-h-[180px] rounded-[2rem] bg-slate-50 border-transparent focus:bg-white transition-all p-6 shadow-sm"
+                      required
                     />
                   </div>
 
-                  <Button className="w-full h-16 rounded-2xl font-black text-lg shadow-xl shadow-primary/20 gradient-bg border-none hover:scale-[1.02] transition-transform">
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full h-16 rounded-2xl font-black text-lg shadow-xl shadow-primary/20 gradient-bg border-none hover:scale-[1.02] transition-transform disabled:opacity-70"
+                  >
                     <Send className="w-5 h-5 mr-2" />
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
+                  {submitMessage && (
+                    <p
+                      className={`text-sm font-semibold text-center ${
+                        submitMessage.type === 'success' ? 'text-green-600' : 'text-red-600'
+                      }`}
+                    >
+                      {submitMessage.text}
+                    </p>
+                  )}
                 </form>
               </Card>
             </motion.div>
